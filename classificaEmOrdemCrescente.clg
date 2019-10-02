@@ -1,0 +1,42 @@
+//Autor: Ronei Beijos de Lana - Graduando em Ciência da Computação, 2019.
+algoritmo classificarOrdemCrescente;
+// Síntese
+//  Objetivo: Colocar 3 numeros em ordem crescente.
+//  Entrada : Três numeros inteiros.
+//  Saída   : Três numeros inteiro em ordem crescente.
+//Este algoritmo não leva em consideração 2 ou mais números iguais.
+
+principal
+	inteiro a,b,c;
+
+	escreval("Digite o valor A: ");
+	leia(a);
+	escreval("Digite o valor B: ");
+	leia(b);
+	escreval("Digite o valor C: ");
+	leia(c);
+	
+	se(a<b e a<c)entao	// Aqui o A já apassou a ser o menor número, restando apenas classificar B e C.	(Duas possibilidades)
+		se(b<c)entao
+			escreval(a,b,c);
+		senao
+			escreval(a,c,b);
+		fimSe
+	fimSe
+	se(b<a e b<c)entao	// Aqui B já é o menor numero, basta verificar A e C.(Duas possibilidades)
+		se(a<c)entao
+			escreval(b,a,c);
+		senao
+			escreva(b,c,a);
+		fimSe
+	fimSe
+	se(c<b e c<a)entao//Aqui C é o menor numero, basta classificar A e B. (Duas possibilidades)
+		se(b<a)entao
+			escreval(c,b,a);
+		senao
+			escreval(c,a,b);
+		fimSe
+	fimSe
+fimPrincipal
+
+
